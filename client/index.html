@@ -22,7 +22,13 @@
     <script>
       $(function(){
         // set up model objects
+
+        // songData is a variable that holds the list of songs. Data is located in "data/data.js"
+        // library is list of songs.
+        // Songs is a instance of Collection.
         var library = new Songs(songData);
+
+
         var app = new AppModel({library: library});
 
         // build a view for the top level of the whole app
