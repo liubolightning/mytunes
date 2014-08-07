@@ -5,17 +5,20 @@ var SongQueue = Songs.extend({
 
   initialize: function(){
     //console.log(this, 'queue');
-    this.on('enqueue', this.addSongToQueue, this);
+    //this.on('enqueue', this.addSongToQueue, this);
   },
 
   add: function (song){
-    this.models.push(song);
+    this.push(song);
+    if(this.length === 1){
+      this.playFirst();
+    }
     // console.log(song, 'add song to queue');
 
   },
 
   playFirst: function(){
-    console.log('playFirst');
+    this.at(0).play();
   }
 
 });
