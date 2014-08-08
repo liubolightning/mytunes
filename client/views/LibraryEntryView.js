@@ -12,7 +12,6 @@ var LibraryEntryView = Backbone.View.extend({
   // which will trigger addToPlayList event
   events: {
     'click': function() {
-      this.model.play();
       this.model.enqueue();
     }
   },

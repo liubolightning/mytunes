@@ -7,22 +7,12 @@ var SongModel = Backbone.Model.extend({
     this.trigger('play', this);
   },
 
-  // when we click on song title in library, song is
-  // added to the queue
-  enqueue : function(){
-    this.trigger('enqueue', this);
+  enqueue: function(){
+  	this.trigger('enqueue', this);
   },
 
-  // when we click a removeSong button in playlist, song is
-  // removed from the queue.
-  dequeue : function(){
-    this.trigger('dequeue', this);
-  },
-
-  // when the song ends, song is removed from the queue
-  // which triggers event ended.
-  ended : function(){
-    this.trigger('ended', this);
-  },
+  dequeue: function(){
+  	this.trigger('dequeue', this);
+  }
 
 });
